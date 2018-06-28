@@ -1,6 +1,6 @@
 {
   "name": "@mark48evo/vesc-protocol-generator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Packet Generator for VESC Protocol",
   "author": "Aurimas Niekis <aurimas@niekis.lt> (https://github.com/Mark48Evo)",
   "license": "MIT",
