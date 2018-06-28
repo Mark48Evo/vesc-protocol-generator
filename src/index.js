@@ -1,5 +1,5 @@
 /* eslint no-bitwise: "off" */
-import CRC16 from './crc16';
+import { crc16 } from '@mark48evo/vesc-packet';
 
 // Beginning (1 byte), Length (1 byte), CRC16 (2 bytes), End Byte (1 byte)
 const PACKET_SIZE_WITHOUT_PAYLOAD = 1 + 1 + 2 + 1;
@@ -32,7 +32,7 @@ export default function generatePacket(payload) {
     buffer.writeUInt8(payload[i], index);
   }
 
-  const crc = CRC16(payload);
+  const crc = crc16(payload);
 
   buffer.writeUInt8(crc >> 8, index);
   index += 1;
